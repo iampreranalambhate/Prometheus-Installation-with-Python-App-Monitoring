@@ -1,6 +1,6 @@
-# 📊 Prometheus Installation with Python App Monitoring
+# Prometheus Installation with Python App Monitoring
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates the complete installation and configuration of:
 
@@ -13,7 +13,7 @@ This project demonstrates the complete installation and configuration of:
 All services are installed and configured on an AWS EC2 Ubuntu 22.04 LTS instance.
 
 
-## 🏗️ Architecture
+##  Architecture
 
 Python App (Port 5000)  
         ↓  
@@ -25,13 +25,13 @@ Prometheus collects:
 - Application metrics
 - System metrics (CPU, Memory, etc.)
 
-# ☁️ Step 1: Launch EC2 Instance
+#  Step 1: Launch EC2 Instance
 
 - Instance Type: t3.micro  
 - Operating System: Ubuntu 22.04 LTS  
 
 
-# 🔐 Step 2: Configure Security Group (Inbound Rules)
+#  Step 2: Configure Security Group (Inbound Rules)
 
 | Port | Purpose |
 |------|----------|
@@ -43,7 +43,7 @@ Prometheus collects:
 Allow Source: 0.0.0.0/0
 
 
-# 🔑 Step 3: Connect to EC2
+#  Step 3: Connect to EC2
 
 ```bash
 ssh -i your-key.pem ubuntu@YOUR_PUBLIC_IP
@@ -55,7 +55,7 @@ Update system:
 sudo apt update -y
 ```
 
-# 📈 Step 4: Install Prometheus
+#  Step 4: Install Prometheus
 
 ## Create User & Directories
 
@@ -137,7 +137,7 @@ http://YOUR_PUBLIC_IP:9090
 ![Python App](images/Access%20Prometheus.png)
 
 
-# 🖥️ Step 5: Install Node Exporter
+#  Step 5: Install Node Exporter
 
 ```bash
 cd /tmp
@@ -208,7 +208,6 @@ Restart Prometheus:
 sudo systemctl restart prometheus
 ```
 
-
 # Step 7: Deploy Python Application
 
 ## Install Python Dependencies
@@ -229,7 +228,6 @@ source myenv/bin/activate
 ```bash
 pip install flask prometheus_client
 ```
-
 
 ## Create Python Application
 
@@ -263,7 +261,6 @@ if __name__ == '__main__':
 ```
 
 Save and exit.
-
 
 ## Run Application
 
@@ -332,7 +329,7 @@ This confirms:
 - Monitoring setup is working properly
 
 
-# ✅ Monitoring Successfully Configured
+# Monitoring Successfully Configured
 
 ✔ Node Exporter metrics collected  
 ✔ Python application metrics collected  
